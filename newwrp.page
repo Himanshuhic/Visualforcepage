@@ -1,0 +1,25 @@
+<apex:page sidebar="false" controller="newwrp">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockSection>
+                <apex:pageBlockTable value="{!lstwrapperIntString}" var="w">
+                    <apex:column headervalue="Action">
+                        <apex:inputcheckbox />
+                    </apex:column>
+                    <apex:column headervalue="Acccount Name">
+                        {!w.Accname}
+                    </apex:column>
+                    <apex:column headerValue="Account Phone">
+                        {!w.Accphone}
+                    </apex:column>
+                    <apex:column headervalue="Opportunity Created Date">
+                        {!w.Oppcreated}
+                    </apex:column>
+                    <apex:column headerValue="Opportunity Name">
+                        {!w.Oppname}
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
