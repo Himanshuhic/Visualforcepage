@@ -1,22 +1,39 @@
+<!-- This is Visualforce page that displays a table of data from a custom Apex controller -->
 <apex:page sidebar="false" controller="newwrp">
+
+<!-- Starting of the Visualforce form-->
     <apex:form>
+
+    <!-- Page block that groups the content together with a border -->
         <apex:pageBlock>
             <apex:pageBlockSection>
+
+            <!-- Page Block Table component that displays a table of data using the lstwrapperIntString list from the controller -->
                 <apex:pageBlockTable value="{!lstwrapperIntString}" var="w">
+
+                <!-- It's displays an input checkbox for each row in the table -->
                     <apex:column headervalue="Action">
                         <apex:inputcheckbox />
                     </apex:column>
+
+                    <!-- It's displays the 'Accname' property value from the 'w' variable -->
                     <apex:column headervalue="Acccount Name">
-                        {!w.Accname}
+                        {!w.accname}
                     </apex:column>
+
+                    <!-- It's displays the 'Accphone' property value from the 'w' variable -->
                     <apex:column headerValue="Account Phone">
-                        {!w.Accphone}
+                        {!w.accphone}
                     </apex:column>
+
+                    <!-- It's displays the 'Oppcreated' property value from the 'w' variable -->
                     <apex:column headervalue="Opportunity Created Date">
-                        {!w.Oppcreated}
+                        {!w.oppcreated}
                     </apex:column>
+
+                    <!-- It's displays the 'Oppname' property value from the 'w' variable -->
                     <apex:column headerValue="Opportunity Name">
-                        {!w.Oppname}
+                        {!w.oppname}
                     </apex:column>
                 </apex:pageBlockTable>
             </apex:pageBlockSection>
